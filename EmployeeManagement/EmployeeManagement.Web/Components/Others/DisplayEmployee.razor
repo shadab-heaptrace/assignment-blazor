@@ -1,0 +1,52 @@
+﻿@inherits DisplayEmployeeBase
+
+<MudCard Class="ma-4 border d-block" Style="width:300px">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.body1">@Employee.FirstName @Employee.LastName</MudText>
+            <MudText Typo="Typo.body2">@Employee.Department.DepartmentName</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudTooltip Text="View">
+                <MudIconButton Href="@($"employeedetails/{Employee.EmployeeId}")" Icon="@Icons.Material.Filled.MenuOpen" Color="Color.Default" />
+            </MudTooltip>
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardMedia Class="object-contain" Image="@Employee.PhotoPath" Height="300" />
+    <MudCardActions>
+        <MudTooltip Text="Edit">
+                <MudIconButton Href="@($"editemployee/{Employee.EmployeeId}")" Icon="@Icons.Material.Filled.Edit" Color="Color.Default" />
+        </MudTooltip>
+        <MudTooltip Text="Delete">
+                <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Default" OnClick="Delete_Click" />
+        </MudTooltip>
+    </MudCardActions>
+</MudCard>
+
+<ComponentLibrary.Confirm ConfirmationChanged="ConfirmDelete_Click"
+                          ConfirmationDescription=@($"Are you sure you want to delete {Employee.FirstName}'s record?") 
+                          @ref="DeleteConfirmation">
+</ComponentLibrary.Confirm>
+
+
+@* <MudMessageBox @ref="mbox" Title="Warning" CancelText="Cancel">
+    <MessageContent>
+        Deleting can <b><i>not</i></b> be undone!
+    </MessageContent>
+    <YesButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.DeleteForever">Delete!</MudButton>
+    </YesButton>
+</MudMessageBox>
+
+@code
+{
+    MudMessageBox mbox { get; set; }
+    string state = "Message box hasn't been opened yet";
+
+    private async void OnButtonClicked()
+    {
+        bool? result = await mbox.Show();
+        state = result == null ? "Canceled" : "Deleted!";
+        StateHasChanged();
+    }
+} *@

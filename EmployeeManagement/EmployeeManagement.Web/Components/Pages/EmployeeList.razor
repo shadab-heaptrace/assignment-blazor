@@ -1,0 +1,30 @@
+﻿@page "/"
+@using EmployeeManagement.Web.Components.Others
+@using Microsoft.AspNetCore.Authorization
+@inherits EmployeeListBase
+
+@attribute [Authorize]
+
+<h3>EmployeeList</h3>
+
+<MudScrollToTop>
+    <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.ArrowCircleUp" Style="background-color:#594AE2;"/>
+</MudScrollToTop>
+
+@if (Employees == null)
+{
+    <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+}
+else
+{
+@* <div class="card-group"> *@
+<MudGrid Spacing="2" Justify="Justify.Center">
+    @foreach(var employee in Employees)
+    {
+       <DisplayEmployee Employee="employee" ShowFooter="ShowFooter"
+                        OnEmployeeSelection="EmployeeSelectionChanged"
+                             OnEmployeeDelete="EmployeeDeleted"></DisplayEmployee>
+    }
+        </MudGrid>
+@* </div> *@
+}

@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Shadab Shaikh\\Documents\\Blazor-Assignment\\EmployeeManagement\\ComponentLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ComponentLibrary.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ComponentLibrary.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Shadab Shaikh\\Documents\\Blazor-Assignment\\EmployeeManagement\\ComponentLibrary\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\Shadab Shaikh\\Documents\\Blazor-Assignment\\EmployeeManagement\\ComponentLibrary\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ComponentLibrary.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ComponentLibrary.props",
+      "PackagePath": "build\\ComponentLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ComponentLibrary.props",
+      "PackagePath": "buildMultiTargeting\\ComponentLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ComponentLibrary.props",
+      "PackagePath": "buildTransitive\\ComponentLibrary.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
